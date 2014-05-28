@@ -15,3 +15,31 @@ window.Portfolio = {
   Routers: {},
   Views: {}
 };
+
+$(document).ready(function () {
+
+  //create and render the app view
+  Portfolio.appView = new Portfolio.Views.appView();
+  Portfolio.appView.render();
+
+  //instansiate collections required
+  Portfolio.projects = new Portfolio.Collections.Projects();
+  Portfolio.posts = new Portfolio.Collections.Posts();
+
+  $.when(
+    //fetch the 'projects'
+    Portfolio.projects.fetch(),
+
+    //fetch the 'posts'
+    Portfolio.posts.fetch()
+
+  ).then(function() {
+
+    console.log("done fetching data");
+
+    //start the backbone router
+    Portfolio.router = new Portfolio.Routers.appRouter();
+    Backbone.history.start({pushState: false});   
+
+  });
+});

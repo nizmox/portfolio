@@ -5,6 +5,10 @@ Portfolio::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  resources :projects, :only => [:index, :show]
+
+  resources :posts, :only => [:index, :show]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
