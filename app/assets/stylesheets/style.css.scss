@@ -1,0 +1,106 @@
+// INSPIRATION
+// http://www.awwwards.com/web-design-awards/kartell-com
+
+body {
+  margin: 0;
+
+  font-family: 'FontAwesome';
+
+  //apply background image to the body
+  background: url('nelson_city_bw.jpg');
+  background-size: cover;
+  background-position: center; //top;
+}
+
+// APP VIEW
+
+.navbar {
+  display: block;
+
+  //required to right align the .links
+  position: fixed;
+  width: 100%;
+
+  margin: 0;
+  padding: 5px 10px;
+  background-color: black;
+
+  .logo {
+    display: inline-block;
+
+    //logo font
+    font-size: 43px;
+    font-family: sans-serif;
+    font-weight: 800;
+    color: white;
+  }
+
+  .links {
+    display: inline-block;
+    padding: 0 20px 0 0;
+
+    //right align the links
+    position: absolute;
+    right: 0px;
+
+    background-color: blue;
+
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      padding-right: 20px;
+
+      color: grey;
+    }
+  }
+  
+}
+
+.footer {
+  padding: 5px 0;
+  background-color: black;
+  text-align: center;
+
+  i.fa {
+    padding: 0 5px;
+
+    color: white;
+    font-size: 36px;
+  }
+}
+
+//-----------------------------------------
+
+// HOME VIEW
+
+.home {
+  .trans-window {
+    // height: 500px;
+
+    .site-heading {
+      display: block;
+      text-align: center;
+
+      padding: 150px 0;
+
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-size: 100px;
+      font-weight: bold;
+      /* Text Shadow */
+      text-shadow: 3px 3px rgba(255,130,0,1);
+    }
+  }
+
+  .projects {
+    height: 500px;
+
+    padding: 20px;
+
+    background-color: rgb(44,44,44);
+
+    color: white;
+  }
+}
