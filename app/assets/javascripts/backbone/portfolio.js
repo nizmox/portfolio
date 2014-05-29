@@ -43,16 +43,22 @@ $(document).ready(function () {
 
   });
 
-  var blurCount = 10;
-  $background = $('#background');
+});
+
+$.fn.unBlur = function (blur) {
+  //store reference to this
+  var self = this;
+  //set counter to either user input or 10
+  var blurCount = blur || 10;
+  //call function to reduce blur (or apply blur initially)
   var blur = function () {
     if (blurCount >= 0) {
       //update the css blur effect
-      $background.css("-webkit-filter","blur("+ blurCount + "px)");
-      $background.css("-moz-filter","blur("+ blurCount + "px)");
-      $background.css("-o-filter","blur("+ blurCount + "px)");
-      $background.css("-ms-filter","blur("+ blurCount + "px)");
-      $background.css("filter","blur("+ blurCount + "px)");
+      self.css("-webkit-filter","blur("+ blurCount + "px)");
+      self.css("-moz-filter","blur("+ blurCount + "px)");
+      self.css("-o-filter","blur("+ blurCount + "px)");
+      self.css("-ms-filter","blur("+ blurCount + "px)");
+      self.css("filter","blur("+ blurCount + "px)");
 
       console.log('setting blur to ',blurCount);
       //decrease the blur counter by 1
@@ -63,5 +69,4 @@ $(document).ready(function () {
   };
 
   blur();
-
-});
+};
