@@ -42,4 +42,26 @@ $(document).ready(function () {
     Backbone.history.start({pushState: false});   
 
   });
+
+  var blurCount = 10;
+  $background = $('#background');
+  var blur = function () {
+    if (blurCount >= 0) {
+      //update the css blur effect
+      $background.css("-webkit-filter","blur("+ blurCount + "px)");
+      $background.css("-moz-filter","blur("+ blurCount + "px)");
+      $background.css("-o-filter","blur("+ blurCount + "px)");
+      $background.css("-ms-filter","blur("+ blurCount + "px)");
+      $background.css("filter","blur("+ blurCount + "px)");
+
+      console.log('setting blur to ',blurCount);
+      //decrease the blur counter by 1
+      blurCount--;
+      //start the function again in 100ms
+      var blurTimer = window.setTimeout(blur, 100);
+    }
+  };
+
+  blur();
+
 });
