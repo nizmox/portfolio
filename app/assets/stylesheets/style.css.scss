@@ -27,6 +27,14 @@ body {
   position:relative;
 }
 
+//-----------------------------------------
+
+// USED IN MULTIPLE VIEWS
+
+// XXXYYY
+
+//-----------------------------------------
+
 // APP VIEW
 
 .navbar {
@@ -49,7 +57,12 @@ body {
     font-weight: 800;
     color: $orange;
     text-shadow: 1px 1px white;
-  }
+
+    &:hover {
+      color: white;
+      text-shadow: -1px -1px gray;
+    }
+  }//.logo
 
   .links {
     display: inline-block;
@@ -58,8 +71,6 @@ body {
     //right align the links
     position: absolute;
     right: 0px;
-
-    // background-color: blue;
 
     list-style: none;
 
@@ -74,10 +85,14 @@ body {
       &:hover {
         background-color: $orange;
         color: white;
-      }
-    }
-  }
-  
+      }//.li:hover
+    }//.li
+  }//.links 
+}//.navbar
+
+#main {
+  //push down the content based on the navbar height
+  padding-top: 59px;
 }
 
 .footer {
@@ -103,8 +118,6 @@ body {
 
 .home {
   .trans-window {
-    // height: 500px;
-
     .site-heading {
       display: block;
       text-align: center;
@@ -120,7 +133,7 @@ body {
     }
   }
 
-  .projects {
+  .about-me {
     // height: 500px;
 
     padding: 20px;
@@ -128,5 +141,13 @@ body {
     background-color: rgb(44,44,44);
 
     color: white;
+
+    hr {
+      box-shadow: 1px 1px 0 $orange;
+    }
   }
 }
+
+//-----------------------------------------
+
+// PROJECTS VIEW

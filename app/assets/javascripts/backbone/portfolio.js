@@ -45,7 +45,9 @@ $(document).ready(function () {
 
 });
 
-$.fn.unBlur = function (blur) {
+// CUSTOM JQUERY PLUGIN
+
+$.fn.unBlur = function (blur, interval) {
   //store reference to this
   var self = this;
   //set counter to either user input or 10
@@ -59,12 +61,10 @@ $.fn.unBlur = function (blur) {
       self.css("-o-filter","blur("+ blurCount + "px)");
       self.css("-ms-filter","blur("+ blurCount + "px)");
       self.css("filter","blur("+ blurCount + "px)");
-
-      console.log('setting blur to ',blurCount);
       //decrease the blur counter by 1
       blurCount--;
       //start the function again in 100ms
-      var blurTimer = window.setTimeout(blur, 100);
+      var blurTimer = window.setTimeout(blur, interval || 100);
     }
   };
 

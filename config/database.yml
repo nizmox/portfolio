@@ -52,10 +52,10 @@ development:
 #   username: portfolio
 #   password:
 
-# production:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: portfolio_production
-#   pool: 5
-#   username: portfolio
-#   password:
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: portfolio_production
+  pool: 5
+  # username: portfolio
+  password:
