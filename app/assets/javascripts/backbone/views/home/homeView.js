@@ -7,8 +7,6 @@ Portfolio.Views.homeView = Backbone.View.extend({
 
   render: function () {
     this.$el.html( this.template() );
-    //run the unBlur jQuery function
-    $('#background').unBlur(20,10);
   }
 
 });
