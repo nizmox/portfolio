@@ -5,14 +5,17 @@ $orange: rgb(255,44,20);
 
 body {
   margin: 0;
-  font-family: 'FontAwesome';
+  font-family: 'FontAwesome', 'Arial';
 }
 
 #background {
   //apply background image to the body
-  background: url('nelson_city_bw.jpg');
+  background: url('nelson_city_bw.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center; //top;
+  // background-position: center; //top;
   
   //force this to the background
   z-index: 0;
@@ -151,3 +154,45 @@ body {
 //-----------------------------------------
 
 // PROJECTS VIEW
+
+$spacing: 20px;
+
+.projects {
+  h2 {
+    margin: 10px 0;
+
+    text-align: center;
+
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    /* Text Shadow */
+    text-shadow: 2px 2px $orange;
+  }
+
+  .project-list {
+    // background-color: green;
+    padding: $spacing 0 $spacing $spacing;
+
+    .project {
+      display: inline-block;
+      vertical-align: top;
+
+      margin-right: $spacing;
+      margin-bottom: 20px;
+      padding: 20px;
+
+      width: 357px;
+      background-color: white;
+
+      h3 {
+        text-align: center;
+      }
+
+      img {
+        width: 357px;
+      }
+    }
+  }
+}
