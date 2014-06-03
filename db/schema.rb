@@ -36,7 +36,10 @@ ActiveRecord::Schema.define(version: 20140528024329) do
   create_table "projects", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.text     "image"
+    t.text     "technologies"
+    t.string   "image_file"
+    t.text     "github_url"
+    t.text     "host_url"
     t.integer  "admin_id"
     t.datetime "created_at"
     t.datetime "updated_at"

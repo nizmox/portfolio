@@ -67,6 +67,15 @@
 
 <!-- PROJECTS SUB VIEW -->
 <script id="projectsSubView" type="text/x-underscore-template">
-  <h3>Text Adventure Builder</h3>
-  <img alt="tab" src="/assets/tab.png">
+  <h3>{{ title }}</h3>
+  <img alt="tab" src="/assets/{{ image_file }}">
+
+  <div class="overlay">
+    <p class="text"><b>Description:</b> {{ description }}</p>
+    <p class="text"><b>Techologies:</b> {{ technologies }}</p>
+    <div class="links">
+      <a href="{{ github_url }}" target="_blank"><i class="fa fa-github-square"></i></a>
+      <a href="{{ host_url }}" target="_blank"><i class="fa fa-external-link-square"></i></a>
+    </div>
+  </div>
 </script>
